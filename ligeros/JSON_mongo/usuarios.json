@@ -1,0 +1,12 @@
+[
+    { "nombre": "Carlos", "apellido": "Gomez", "edad": 30 },
+    { "nombre": "Lucía", "apellido": "Ramirez", "edad": 25 },
+    { "nombre": "Miguel", "apellido": "Fernandez", "edad": 45 },
+    { "nombre": "Ana", "apellido": "Lopez", "edad": 34 },
+    { "nombre": "Juan", "apellido": "Martinez", "edad": 29 },
+    { "nombre": "Laura", "apellido": "Vega", "edad": 41 },
+    { "nombre": "Pedro", "apellido": "Castro", "edad": 23 },
+    { "nombre": "Marta", "apellido": "Diaz", "edad": 27 },
+    { "nombre": "Sofia", "apellido": "Gonzalez", "edad": 31 },
+    { "nombre": "Diego", "apellido": "Mendoza", "edad": 38 }
+]

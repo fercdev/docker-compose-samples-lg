@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress_web
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: sampleuser
+      WORDPRESS_DB_PASSWORD: samplepass
+      WORDPRESS_DB_NAME: exampledb
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+  db:
+    image: mysql:5.7
+    container_name: wordpress_db
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_USER: sampleuser
+      MYSQL_PASSWORD: samplepass
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+volumes:
+  db_data:

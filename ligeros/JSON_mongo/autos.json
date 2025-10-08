@@ -1,0 +1,12 @@
+[
+    { "nombre": "Mustang", "marca": "Ford", "color": "Rojo" },
+    { "nombre": "Civic", "marca": "Honda", "color": "Azul" },
+    { "nombre": "Corolla", "marca": "Toyota", "color": "Blanco" },
+    { "nombre": "Model S", "marca": "Tesla", "color": "Negro" },
+    { "nombre": "Camaro", "marca": "Chevrolet", "color": "Amarillo" },
+    { "nombre": "Golf", "marca": "Volkswagen", "color": "Gris" },
+    { "nombre": "Charger", "marca": "Dodge", "color": "Verde" },
+    { "nombre": "Accord", "marca": "Honda", "color": "Azul" },
+    { "nombre": "Mazda3", "marca": "Mazda", "color": "Rojo" },
+    { "nombre": "Altima", "marca": "Nissan", "color": "Blanco" }
+]

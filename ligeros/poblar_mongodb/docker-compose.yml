@@ -1,0 +1,13 @@
+
+services:
+  mongodb:
+    image: mongo:5.0.9-focal
+    container_name: mongodb_contenedor
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+    ports:
+      - 27017:27017
+    volumes:
+      - ./usuarios.json:/data/usuarios.json
+    command: bash -c "mongod --bind_ip_all & sleep 5; mongoimport --host localhost --db mi_db --collection usuarios --file /data/usuarios.json --jsonArray"
